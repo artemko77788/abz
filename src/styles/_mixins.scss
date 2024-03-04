@@ -1,0 +1,19 @@
+@mixin for-size($size) {
+  @if $size == phone {
+    @media (min-width: 360px) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else if $size == large-desktop {
+    @media (min-width: 2560px) {
+      @content;
+    }
+  }
+}
